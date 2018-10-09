@@ -84,6 +84,6 @@ module SmartyStreets
   end
 
   def self.api_url
-    defined?(@@api_url) ? @@api_url : 'https://api.smartystreets.com'
+    defined?(@@api_url) ? @@api_url : 'https://us-street.api.smartystreets.com'
   end
 end

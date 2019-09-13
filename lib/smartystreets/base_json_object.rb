@@ -27,22 +27,22 @@ module SmartyStreets
       check_type(hash[key], String)
     end
 
-    def get_optional_fixnum(hash, key)
-      hash[key] != nil ? check_type(hash[key], Fixnum) : nil
+    def get_optional_integer(hash, key)
+      hash[key] != nil ? check_type(hash[key], Integer) : nil
     end
 
-    def get_required_fixnum(hash, key)
-      check_argument(hash[key] != nil, -> { "#{key} was nil and should be a fixnum"})
-      check_type(hash[key], Fixnum)
+    def get_required_integer(hash, key)
+      check_argument(hash[key] != nil, -> { "#{key} was nil and should be an integer"})
+      check_type(hash[key], Integer)
     end
 
     def get_optional_number(hash, key)
-      hash[key] != nil ? check_type(hash[key], Float, Fixnum) : nil
+      hash[key] != nil ? check_type(hash[key], Float, Integer) : nil
     end
 
     def get_required_number(hash, key)
       check_argument(hash[key] != nil)
-      check_type(hash[key], Float, Fixnum)
+      check_type(hash[key], Float, Integer)
     end
 
     def get_optional_float(hash, key)

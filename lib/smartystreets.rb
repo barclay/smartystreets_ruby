@@ -84,7 +84,7 @@ module SmartyStreets
   end
 
   def self.street_address_api_url
-    defined?(@@api_url) ? @@api_url : 'https://api.smartystreets.com'
+    defined?(@@api_url) ? @@api_url : 'https://us-street.api.smartystreets.com'
   end
 
   # Set the Zipcode API url.

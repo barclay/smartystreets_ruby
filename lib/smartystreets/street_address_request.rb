@@ -32,7 +32,7 @@ module SmartyStreets
       @zipcode = get_optional_string(hash, :zipcode)
       @lastline = get_optional_string(hash, :lastline)
       @urbanization = get_optional_string(hash, :urbanization)
-      @candidates = get_optional_fixnum(hash, :candidates)
+      @candidates = get_optional_integer(hash, :candidates)
     end
 
     def to_json(*a)

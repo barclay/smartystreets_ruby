@@ -24,8 +24,8 @@ module SmartyStreets
     def initialize(hash)
       super(hash)
       @input_id = get_optional_string(hash, :input_id)
-      @input_index = get_optional_fixnum(hash, :input_index)
-      @candidate_index = get_optional_fixnum(hash, :candidate_index)
+      @input_index = get_optional_integer(hash, :input_index)
+      @candidate_index = get_optional_integer(hash, :candidate_index)
       @addressee = get_optional_string(hash, :addressee)
       @delivery_line_1 = get_optional_string(hash, :delivery_line_1)
       @delivery_line_2 = get_optional_string(hash, :delivery_line_2)
@@ -121,7 +121,7 @@ module SmartyStreets
         @longitude = get_optional_number(hash, :longitude)
         @precision = get_optional_string(hash, :precision)
         @time_zone = get_optional_string(hash, :time_zone)
-        @utc_offset = get_optional_fixnum(hash, :utc_offset)
+        @utc_offset = get_optional_integer(hash, :utc_offset)
         @dst = get_optional_boolean(hash, :dst)
       end
     end

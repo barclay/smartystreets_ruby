@@ -24,6 +24,8 @@ require 'smartystreets/version'
 module SmartyStreets
   class << self
     include Util
+    include HTTParty
+    default_options.update(verify: false)
   end
 
   @@lock = Mutex.new
